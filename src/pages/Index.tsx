@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Phone, Battery, Projector, Star, MapPin, Phone as PhoneIcon, Mail, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 const Index = () => {
   return (
@@ -64,9 +64,206 @@ const Index = () => {
                 <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all transform hover:scale-105">
                   Comprar Ahora - $1,299
                 </button>
-                <button className="border-2 border-white/30 hover:border-white text-white font-bold py-4 px-8 rounded-lg text-lg transition-all">
-                  Ver Especificaciones
-                </button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button className="border-2 border-white/30 hover:border-white text-white font-bold py-4 px-8 rounded-lg text-lg transition-all">
+                      Ver Especificaciones
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto bg-gradient-to-br from-slate-900 to-purple-900 border-purple-500/30">
+                    <DialogHeader>
+                      <DialogTitle className="text-2xl font-bold text-white mb-4 flex items-center">
+                        <Phone className="h-6 w-6 text-purple-400 mr-2" />
+                        PowerVision Pro - Especificaciones Técnicas
+                      </DialogTitle>
+                    </DialogHeader>
+                    
+                    <div className="grid md:grid-cols-2 gap-6 mt-6">
+                      {/* Especificaciones Generales */}
+                      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                        <h3 className="text-xl font-bold text-purple-400 mb-4">📱 General</h3>
+                        <div className="space-y-3 text-gray-300">
+                          <div className="flex justify-between">
+                            <span>Pantalla:</span>
+                            <span className="text-white">6.8" AMOLED 4K (3840x2160)</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Procesador:</span>
+                            <span className="text-white">Snapdragon 8 Gen 3</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>RAM:</span>
+                            <span className="text-white">16GB LPDDR5X</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Almacenamiento:</span>
+                            <span className="text-white">512GB UFS 4.0</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Sistema:</span>
+                            <span className="text-white">Android 14</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Proyector */}
+                      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                        <h3 className="text-xl font-bold text-purple-400 mb-4">📽️ Proyector Integrado</h3>
+                        <div className="space-y-3 text-gray-300">
+                          <div className="flex justify-between">
+                            <span>Resolución:</span>
+                            <span className="text-white">4K UHD (3840x2160)</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Brillo:</span>
+                            <span className="text-white">2000 ANSI Lúmenes</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Tamaño proyección:</span>
+                            <span className="text-white">30" a 300"</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Tecnología:</span>
+                            <span className="text-white">DLP + LED</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Duración lámpara:</span>
+                            <span className="text-white">50,000 horas</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Batería */}
+                      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                        <h3 className="text-xl font-bold text-green-400 mb-4">🔋 Sistema de Doble Batería</h3>
+                        <div className="space-y-3 text-gray-300">
+                          <div className="flex justify-between">
+                            <span>Capacidad total:</span>
+                            <span className="text-white">10,000mAh</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Batería principal:</span>
+                            <span className="text-white">6,000mAh</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Batería proyector:</span>
+                            <span className="text-white">4,000mAh</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Carga rápida:</span>
+                            <span className="text-white">120W SuperCharge</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Carga inalámbrica:</span>
+                            <span className="text-white">50W Qi</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Cámara */}
+                      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                        <h3 className="text-xl font-bold text-blue-400 mb-4">📸 Sistema de Cámaras</h3>
+                        <div className="space-y-3 text-gray-300">
+                          <div className="flex justify-between">
+                            <span>Principal:</span>
+                            <span className="text-white">200MP f/1.4 OIS</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Ultra gran angular:</span>
+                            <span className="text-white">50MP f/2.2 120°</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Teleobjetivo:</span>
+                            <span className="text-white">50MP f/2.8 5x zoom</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Frontal:</span>
+                            <span className="text-white">32MP f/2.0</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Video:</span>
+                            <span className="text-white">8K@30fps, 4K@120fps</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Conectividad */}
+                      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                        <h3 className="text-xl font-bold text-yellow-400 mb-4">📡 Conectividad</h3>
+                        <div className="space-y-3 text-gray-300">
+                          <div className="flex justify-between">
+                            <span>Red:</span>
+                            <span className="text-white">5G mmWave/Sub-6</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>WiFi:</span>
+                            <span className="text-white">WiFi 7 (802.11be)</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Bluetooth:</span>
+                            <span className="text-white">5.4 LE</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>USB:</span>
+                            <span className="text-white">USB-C 3.2</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>NFC:</span>
+                            <span className="text-white">Sí</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Construcción */}
+                      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                        <h3 className="text-xl font-bold text-red-400 mb-4">🏗️ Construcción</h3>
+                        <div className="space-y-3 text-gray-300">
+                          <div className="flex justify-between">
+                            <span>Materiales:</span>
+                            <span className="text-white">Titanio + Vidrio Gorilla Glass Victus 3</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Resistencia:</span>
+                            <span className="text-white">IP68</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Dimensiones:</span>
+                            <span className="text-white">165 x 76 x 12.5 mm</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Peso:</span>
+                            <span className="text-white">285g</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Colores:</span>
+                            <span className="text-white">Negro Titanio, Púrpura Aurora</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-8 p-6 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl border border-purple-500/30">
+                      <h3 className="text-xl font-bold text-white mb-3">✨ Características Exclusivas</h3>
+                      <ul className="text-gray-300 space-y-2">
+                        <li>• Proyección sin cables hasta 300 pulgadas</li>
+                        <li>• Batería inteligente que prioriza uso según necesidad</li>
+                        <li>• Modo cine con audio Dolby Atmos integrado</li>
+                        <li>• Asistente IA para optimización automática de proyección</li>
+                        <li>• Carga ultra rápida 0-80% en 25 minutos</li>
+                        <li>• Resistente a caídas desde 2 metros</li>
+                      </ul>
+                    </div>
+
+                    <div className="mt-6 text-center">
+                      <div className="text-3xl font-bold text-white mb-2">$1,299 USD</div>
+                      <div className="text-gray-400 line-through mb-2">Precio original: $1,599</div>
+                      <div className="text-green-400 font-semibold mb-4">¡Ahorras $300!</div>
+                      <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all transform hover:scale-105">
+                        Comprar Ahora
+                      </button>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
             
