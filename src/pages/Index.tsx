@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Phone, Battery, Projector, Star, MapPin, Phone as PhoneIcon, Mail, Facebook, Instagram, Twitter } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
@@ -270,13 +271,12 @@ const Index = () => {
             <div className="relative">
               <div className="relative z-10 bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
                 <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 shadow-2xl">
-                  <div className="bg-black rounded-xl h-96 flex items-center justify-center mb-4">
-                    <div className="text-center">
-                      <div className="w-32 h-56 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                        <Phone className="h-16 w-16 text-white" />
-                      </div>
-                      <div className="text-purple-400 text-sm">PowerVision Pro</div>
-                    </div>
+                  <div className="bg-black rounded-xl overflow-hidden mb-4">
+                    <img 
+                      src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&h=400&fit=crop" 
+                      alt="PowerVision Pro - Smartphone con proyector integrado" 
+                      className="w-full h-96 object-cover"
+                    />
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-white mb-2">$1,299</div>
@@ -335,8 +335,12 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Producto Estrella */}
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30 transform hover:scale-105 transition-all">
-              <div className="bg-black rounded-xl h-48 flex items-center justify-center mb-4">
-                <Phone className="h-16 w-16 text-purple-400" />
+              <div className="bg-black rounded-xl overflow-hidden mb-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400&h=300&fit=crop" 
+                  alt="PowerVision Pro" 
+                  className="w-full h-48 object-cover"
+                />
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold text-white mb-2">PowerVision Pro</h3>
@@ -355,8 +359,12 @@ const Index = () => {
 
             {/* Otros Productos */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-500/30 transition-all">
-              <div className="bg-black rounded-xl h-48 flex items-center justify-center mb-4">
-                <Phone className="h-16 w-16 text-blue-400" />
+              <div className="bg-black rounded-xl overflow-hidden mb-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop" 
+                  alt="AquaPhone Ultra" 
+                  className="w-full h-48 object-cover"
+                />
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold text-white mb-2">AquaPhone Ultra</h3>
@@ -374,8 +382,12 @@ const Index = () => {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-green-500/30 transition-all">
-              <div className="bg-black rounded-xl h-48 flex items-center justify-center mb-4">
-                <Phone className="h-16 w-16 text-green-400" />
+              <div className="bg-black rounded-xl overflow-hidden mb-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=400&h=300&fit=crop" 
+                  alt="GameMaster Pro" 
+                  className="w-full h-48 object-cover"
+                />
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold text-white mb-2">GameMaster Pro</h3>
@@ -393,8 +405,12 @@ const Index = () => {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-red-500/30 transition-all">
-              <div className="bg-black rounded-xl h-48 flex items-center justify-center mb-4">
-                <Phone className="h-16 w-16 text-red-400" />
+              <div className="bg-black rounded-xl overflow-hidden mb-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=400&h=300&fit=crop" 
+                  alt="SpeedCharge Elite" 
+                  className="w-full h-48 object-cover"
+                />
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold text-white mb-2">SpeedCharge Elite</h3>
@@ -413,8 +429,12 @@ const Index = () => {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-yellow-500/30 transition-all">
-              <div className="bg-black rounded-xl h-48 flex items-center justify-center mb-4">
-                <Phone className="h-16 w-16 text-yellow-400" />
+              <div className="bg-black rounded-xl overflow-hidden mb-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=400&h=300&fit=crop" 
+                  alt="CameraKing Max" 
+                  className="w-full h-48 object-cover"
+                />
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold text-white mb-2">CameraKing Max</h3>
@@ -432,8 +452,12 @@ const Index = () => {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-indigo-500/30 transition-all">
-              <div className="bg-black rounded-xl h-48 flex items-center justify-center mb-4">
-                <Phone className="h-16 w-16 text-indigo-400" />
+              <div className="bg-black rounded-xl overflow-hidden mb-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1556656793-08538906a9f8?w=400&h=300&fit=crop" 
+                  alt="FoldTech Revolution" 
+                  className="w-full h-48 object-cover"
+                />
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-bold text-white mb-2">FoldTech Revolution</h3>
